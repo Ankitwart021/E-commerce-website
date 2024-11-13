@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy - Food Ordering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        .navbar {
+            position: absolute;
+            width: 100%;
+            background: transparent; /* Remove the dark background */
+            z-index: 10;
+        }
+        
+        .navbar .nav-link, .navbar-brand {
+            color: white !important; /* Set text color to white */
+        }
+        .hero-section {
+            background-image: url('./images/bg3.jpg!d'); /* Add background image path */
+            background-size: cover;
+            background-position: center;
+            height: 400px; /* Adjust height as needed */
+            padding-top: 200px;
+            color: white;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        /* Food Menu Section */
+        .food-item {
+            width: 100%;
+            height: 420px; /* Set a fixed height for uniform size */
+            background-color: #FFEB3B;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .food-item img {
+            width: 100%;
+            height: 150px; /* Set a fixed height for images */
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .food-item h5 {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .food-item .description {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+        .food-item .price {
+            color: rgba(18, 37, 243, 0.818); /* Highlighted price color */
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .add-to-cart-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #ff1744;
+        }
+        .food-item .rating {
+            color: #0f07ffae; /* Gold color for stars */
+            font-size: 1.1rem;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="Yummy Logo" style="height: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>It's not just food, 
+                it's an Experience!</h1>
+            <p>The best delicious food that meets your needs, order now</p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Food Menu Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-5">Order Fresh Food</h2>
+    <div class="row">
+        <!-- Food Item -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card food-item">
+                <img src="./images/masala2.avif" class="card-img-top" alt="Masala Dosa">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Masala Dosa</h5>
+                    <p class="description">Crispy dosa filled with spiced potato mix.</p> <!-- Description -->
+                    <p class="price">₹60</p>
+                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                    <p class="rating">★ 4.5</p> <!-- Rating -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card food-item">
+                <img src="./images/burger.avif" class="card-img-top" alt="Burger">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Burger</h5>
+                    <p class="description">Juicy patty with fresh veggies and sauces in bun.</p> <!-- Description -->
+                    <p class="price">₹80</p>
+                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                    <p class="rating">★ 4.7</p> <!-- Rating -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card food-item">
+                <img src="./images/pizza.jpg" class="card-img-top" alt="Pizza">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pizza</h5>
+                    <p class="description"> Cheesy delight topped with fresh veggies and herbs.</p> <!-- Description -->
+                    <p class="price">₹120</p>
+                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                    <p class="rating">★ 4.3</p> <!-- Rating -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card food-item">
+                <img src="./images/garlic bread.jpg" class="card-img-top" alt="Garlic Bread">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Garlic Bread</h5>
+                    <p class="description">Toasted bread infused with garlic and butter.</p> <!-- Description -->
+                    <p class="price">₹90</p>
+                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                    <p class="rating">★ 4.9</p> <!-- Rating -->
+                </div>
+            </div>
+        </div>
+        <!-- Repeat similar structure for other items -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card food-item">
+                <img src="./images/staeamed idli.jpg" class="card-img-top" alt="Steamed Idli">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Steamed Idli</h5>
+                    <p class="description">Soft Idlis served with chutney and sambar.</p>
+                    <p class="price">₹40</p>
+                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                    <p class="rating">★ 4.1</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add more food items as needed -->
+    </div>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
